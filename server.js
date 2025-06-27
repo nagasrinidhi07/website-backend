@@ -19,19 +19,19 @@ const port = process.env.PORT || 4000;
 app.use(express.json());
 app.use(cors());
 
-//  Connect to MongoDB
+// Connect to MongoDB
 connectDB();
 
-//  Routes
+// Routes
 app.use("/api/food", foodRouter);
 app.use("/api/user", userRouter);
 app.use("/api/cart", cartRouter);
 app.use("/api/order", orderRouter);
 
-// Serve static image files from 'uploads' folder
+// Serve static files
 app.use("/images", express.static("uploads"));
 
-//  Root route (test)
+// Root route
 app.get("/", (req, res) => {
   res.send("API Working");
 });
