@@ -7,7 +7,7 @@ import Stripe from "stripe";
 // Initialize Stripe with your secret key from .env
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 // Replace this with your actual deployed frontend URL when deploying
-const frontend_url = "http://localhost:5173";
+const frontend_url = "https://website-frontend-ewy9.onrender.com/";
 
 //  Place a new order
 const placeOrder = async (req, res) => {
